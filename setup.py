@@ -4,12 +4,15 @@ setup(
     name="kitecmd-IR",
     version="0.1",
     author="coltonsr77",
-    description="KiteCMD tool that checks, installs, and verifies InstallerReady.",
+    description="KiteCMD extension that installs and verifies InstallerReady and kitecmd.",
     packages=find_packages(),
+    python_requires=">=3.8",
+    install_requires=[
+        "kitecmd>=0.1",        # ensures kitecmd is installed
+    ],
     entry_points={
         "console_scripts": [
             "kitecmd-IR=kitecmd_IR.main:main",
         ],
     },
-    python_requires=">=3.8",
 )
