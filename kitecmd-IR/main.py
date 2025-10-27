@@ -15,9 +15,9 @@ def install_package(package_name):
     """Install or update a package via pip."""
     try:
         subprocess.check_call([sys.executable, "-m", "pip", "install", "--upgrade", package_name])
-        print(f"✅ '{package_name}' installed or updated successfully.")
+        print(f"'{package_name}' installed or updated successfully.")
     except subprocess.CalledProcessError:
-        print(f"❌ Failed to install '{package_name}'.")
+        print(f"Failed to install '{package_name}'.")
 
 def get_latest_version(package_name):
     """Fetch the latest version of a PyPI package."""
@@ -37,30 +37,30 @@ def check_for_self_update():
 
     latest_version = get_latest_version(PACKAGE_NAME)
     if not latest_version:
-        print("⚠️ Unable to check for updates.")
+        print("Unable to check for updates.")
         return
 
     if current_version != latest_version:
-        print(f"🔄 Update available: {PACKAGE_NAME} {current_version} → {latest_version}")
+        print(f"Update available: {PACKAGE_NAME} {current_version} → {latest_version}")
         install_package(PACKAGE_NAME)
-        print("✅ Restart the command to use the latest version.")
+        print("Restart the command to use the latest version.")
         sys.exit(0)
     else:
-        print("✅ kitecmd-IR is up to date.")
+        print("kitecmd-IR is up to date.")
 
 def main():
-    print("🔍 Checking for kitecmd-IR updates...")
+    print("Checking for any kitecmd-IR updates...")
     check_for_self_update()
 
-    print("\n🔍 Checking required packages...")
+    print("Checking required packages...")
     for pkg in ["kitecmd", "InstallerReady"]:
         if is_installed(pkg):
-            print(f"✅ {pkg} is already installed.")
+            print(f"{pkg} is already installed.")
         else:
-            print(f"⚙️ Installing {pkg}...")
+            print(f"Installing {pkg}...")
             install_package(pkg)
 
-    print("\n🚀 All systems ready — kitecmd-IR, kitecmd, and InstallerReady are installed and current!")
+    print("kitecmd-IR, kitecmd, and InstallerReady are installed and current!")
 
 if __name__ == "__main__":
     main()
