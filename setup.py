@@ -2,13 +2,13 @@ from setuptools import setup, find_packages
 
 setup(
     name="kitecmd-IR",
-    version="0.1",
+    version="0.2",
     author="coltonsr77",
     description="KiteCMD extension that installs and verifies InstallerReady and kitecmd.",
     packages=find_packages(),
     python_requires=">=3.8",
     install_requires=[
-        "kitecmd>=0.1",        # ensures kitecmd is installed
+        "kitecmd>=0.5",        # ensures kitecmd is installed
     ],
     entry_points={
         "console_scripts": [
