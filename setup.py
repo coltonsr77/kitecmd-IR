@@ -8,7 +8,7 @@ setup(
     packages=find_packages(),
     python_requires=">=3.8",
     install_requires=[
-        "kitecmd>=0.5",        # ensures kitecmd is installed
+        "kitecmd>=0.7",        # ensures kitecmd is installed
     ],
     entry_points={
         "console_scripts": [
