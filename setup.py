@@ -6,7 +6,7 @@ setup(
     author="coltonsr77",
     description="A KiteCMD extension that installs and verifies InstallerReady and kitecmd.",
     packages=find_packages(),
-    python_requires=">=3.11",
+    python_requires=">=3.12",
     install_requires=[
         "kitecmd>=0.8",
     ],
