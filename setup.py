@@ -12,7 +12,7 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "kitecmd-IR=kitecmd-IR.main:main",
+            "kitecmd-IR=kitecmd_IR.main:main",
         ],
     },
 )

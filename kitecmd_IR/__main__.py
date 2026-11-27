@@ -1,4 +1,4 @@
-"""Allow running the package with `python -m kitecmd-IR`."""
+"""Allow running the package with `python -m kitecmd_IR`."""
 
 from .main import main
 
