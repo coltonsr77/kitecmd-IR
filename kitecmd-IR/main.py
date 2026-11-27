@@ -3,7 +3,7 @@ import sys
 import importlib.util
 import json
 import urllib.request
-import pkg_resources
+from importlib.metadata import PackageNotFoundError, version
 
 PACKAGE_NAME = "kitecmd-IR"
 
@@ -31,8 +31,8 @@ def get_latest_version(package_name):
 def check_for_self_update():
     """Check if kitecmd-IR is up to date."""
     try:
-        current_version = pkg_resources.get_distribution(PACKAGE_NAME).version
-    except Exception:
+        current_version = version(PACKAGE_NAME)
+    except PackageNotFoundError:
         current_version = "0.0"
 
     latest_version = get_latest_version(PACKAGE_NAME)
