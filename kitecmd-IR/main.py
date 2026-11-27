@@ -3,7 +3,7 @@ import sys
 import importlib.util
 import json
 import urllib.request
-## import pkg_resources
+import pkg_resources
 
 PACKAGE_NAME = "kitecmd-IR"
 
